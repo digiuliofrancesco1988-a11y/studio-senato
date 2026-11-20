@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Senato — Tecnico informatico</title>
+  <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+  <a class="salta" href="#principale">Vai al contenuto</a>
+  <header class="barra">
+    <button class="menu" id="apri-menu" type="button" aria-label="Apri l'indice">Indice</button>
+    <div class="marca">
+      <span class="marca-kicker">S01/26</span>
+      <strong>Studio tecnico informatico</strong>
+    </div>
+    <form class="cerca" id="form-cerca" role="search">
+      <label class="sr" for="q">Cerca nelle domande e nelle risposte</label>
+      <input id="q" type="search" placeholder="Cerca un argomento, un termine, una sigla…" autocomplete="off">
+    </form>
+    <nav class="azioni" aria-label="Modalità">
+      <button type="button" data-vai="home" class="attivo" id="btn-home">Bando</button>
+      <button type="button" data-vai="quiz" id="btn-quiz">Allenamento</button>
+      <button type="button" data-vai="simula" id="btn-simula">Simulazione</button>
+      <button type="button" id="btn-stampa">Stampa</button>
+    </nav>
+  </header>
+
+  <div class="guscio">
+    <aside class="indice" id="indice" aria-label="Scritto e orale">
+      <p class="indice-nota">Le aree, messe nell’ordine delle prove. Gli stessi file stanno in <em>raccolta domande</em>.</p>
+      <div id="lista-aree"></div>
+      <div class="indice-piede">
+        <p id="conto-progresso"></p>
+        <button type="button" id="azzera" class="testo">Azzera i segni di studio</button>
+      </div>
+    </aside>
+
+    <main id="principale" tabindex="-1"></main>
+    <aside class="lato" id="lato" aria-label="In questa voce"></aside>
+  </div>
+
+  <div class="tenda" id="tenda" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
